@@ -109,6 +109,11 @@ section {
 .margin0r1r {
   margin: 0 1rem;
 }
+
+.white {
+  background-color: var(--main-bg-color) !important;
+  color: var(--secondary-bg-color) !important;
+}
 /********************************************************************* NAV *********************************************************************/ 
 .mobile {
   display: none;
@@ -223,6 +228,39 @@ div.content_title h2 {
 div.content_title h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
+}
+
+.home_FaarSmallExplanation {
+  display: flex;
+  justify-content: center;
+  align-items: strech;
+  padding: 40px 0;
+}
+
+
+
+.home_FaarSmallExplanation img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: 0.01px center;
+  border-radius: 50%;
+  padding: 2px;
+  box-shadow: var(--box-shadow);
+}
+
+.home_FaarSmallExplanation article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+  max-width: 60%;
+}
+
+.home_FaarSmallExplanation article p {
+  max-width: 100%;
+  margin: 20px 0;
 }
 
 .home_actions_container {
