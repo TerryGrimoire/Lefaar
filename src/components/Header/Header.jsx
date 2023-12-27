@@ -12,7 +12,7 @@ function Burger({ helmet }) {
   const [openBurger, setOpenBurger] = useState(false);
 
   return (
-    <header className="flex justify-center align-center">
+    <header className="flex justify-between align-center">
       <button
         type="button"
         onClick={() => setOpenBurger(!openBurger)}

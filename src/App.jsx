@@ -11,10 +11,11 @@ import "./App.css";
 
 function App() {
   const helmet = {
-    title: "Le FAAR",
+    title: "Le Faar",
     href: "https://lefaar.re",
     description: "Change description",
   };
+
   return (
     <BrowserRouter>
       <Header helmet={helmet} />
