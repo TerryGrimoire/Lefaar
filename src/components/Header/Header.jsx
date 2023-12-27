@@ -3,13 +3,16 @@ import { Link } from "react-router-dom";
 import Nav from "../Navigation/Nav";
 import Navbar from "../Navigation/Navbar";
 import burger from "../../assets/menu.png";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo2.png";
+import facebook from "../../assets/facebook.png";
+import instagram from "../../assets/instagram.png";
+import linkedin from "../../assets/linkedin.png";
 
 function Burger({ helmet }) {
   const [openBurger, setOpenBurger] = useState(false);
 
   return (
-    <header className="flex padding-header justify-between align-center">
+    <header className="flex justify-center align-center">
       <button
         type="button"
         onClick={() => setOpenBurger(!openBurger)}
@@ -27,6 +30,17 @@ function Burger({ helmet }) {
       {openBurger && <Nav setOpenBurger={setOpenBurger} />}
       <div className="desktop">
         <Navbar setOpenBurger={setOpenBurger} />
+      </div>
+      <div className="social_media">
+        <a href="https://www.facebook.com/AssociationLeFAAR">
+          <img src={facebook} alt="logo Facebook" />
+        </a>
+        <a href="/">
+          <img src={instagram} alt="logo Instagram" />
+        </a>
+        <a href="/">
+          <img src={linkedin} alt="logo LinkedIn" />
+        </a>
       </div>
     </header>
   );

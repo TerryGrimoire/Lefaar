@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import Image from "../components/Home/LandingPage/Image";
+import video from "../assets/video.mp4";
 
 export default function Home({ helmet }) {
   useEffect(() => {
@@ -14,36 +15,49 @@ export default function Home({ helmet }) {
         <meta name="description" content={helmet.description} />
       </Helmet>
 
-      {/*
-
-        Options here :
-        -  Main image Style - Landing page like Charles Portefolio (main image + title in the middle) 
-        -  Main video Style - Landing page like Barber 902 (main vidéo + title in the middle)
-        -  Animation  Style - Landing page like ASMK (main image animated + title in the middle)
- 
-        */}
-
-      <Image title={helmet.title} />
-      <section className="section2">
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus
-          aliquid vel blanditiis. Iste earum tempore, corrupti distinctio nam
-          dignissimos incidunt eveniet in tempora libero! Possimus explicabo
-          architecto aut dolorem blanditiis magni porro maiores dignissimos
-          repellat rem voluptatum, magnam provident at illum atque fugit
-          assumenda eaque minima iste. Quaerat odit suscipit possimus nostrum,
-          libero odio est quo culpa tempore ex tenetur sed esse unde doloremque
-          ea minus rerum laboriosam eveniet labore ipsam voluptate officiis
-          fugiat. Natus minima voluptatem hic eum ad perferendis rerum animi,
-          provident aliquid quisquam, mollitia eaque enim eligendi consequatur
-          nihil eveniet ex corrupti delectus quidem consequuntur! Saepe
-          repudiandae excepturi ut atque dolorum quisquam voluptas laudantium
-          sapiente, obcaecati voluptatibus earum adipisci dolor maiores beatae
-          delectus ab pariatur! Fuga voluptatibus soluta quidem alias suscipit
-          animi, nisi dolorum adipisci veritatis veniam amet aut odio magni,
-          nihil nobis fugit iste expedita ut nulla quas consequuntur debitis?
-          Nihil ipsam dicta saepe temporibus molestiae!
-        </p>
+      <section className="home">
+        <div className="main_video">
+          <video autoPlay loop muted>
+            <track kind="captions" />
+            <source src={video} type="video/mp4" />
+          </video>
+          <div className="main_title">
+            <h1>Le Faar</h1>
+            <h2>Formation, Animation, Accompagnement, Recherche</h2>
+            <h3>Corps, Genres, Identités</h3>
+            <Link to="/">
+              <button type="button" className="button_style">
+                En savoir plus
+              </button>
+            </Link>
+          </div>
+        </div>
+        <div>
+          <h2>La Formation</h2>
+          <article>
+            <img src="" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+              natus veniam iste amet totam sed est, velit nulla pariatur atque
+              cum fugit voluptatum temporibus. Explicabo maxime facilis tempore
+              aut illo commodi consequatur deserunt odit? Distinctio nihil iste
+              eligendi aspernatur placeat dolorem alias quasi modi recusandae
+              voluptates, architecto temporibus repudiandae explicabo possimus
+              harum aut odio! Explicabo suscipit architecto at optio doloremque
+              nobis blanditiis maiores quam, dolores esse ab? Ut tempore facere
+              consectetur, dolorem dignissimos quos! Necessitatibus eum placeat
+              nam ipsam ipsa eius sed, laboriosam esse at obcaecati quos! Eum
+              obcaecati voluptatum quisquam maiores voluptatibus ipsam, et
+              necessitatibus distinctio deleniti dolor pariatur id aliquid,
+              tempore rerum porro consequatur magnam non quae illo tempora. Odio
+              sed architecto vitae corporis vero unde nostrum repellat
+              consequatur laudantium eveniet, saepe numquam cumque adipisci
+              expedita libero voluptas? Voluptas ipsam, nihil officiis saepe
+              temporibus non soluta consequatur aspernatur, reprehenderit
+              veritatis est, quam earum possimus a id atque.
+            </p>
+          </article>
+        </div>
       </section>
     </main>
   );

@@ -5,10 +5,11 @@
   --main-bg-color : #FFFFFF;
   --secondary-bg-color : #191919;
   --third-color : #999999;
-  --button-color: #0055FF;
+  --button-color: #0c47bd;
   --box-shadow: #e1e1e1 0px 1px 0px, #e1e1e1 0px 4px 16px, #e1e1e1 0px 8px 16px;
   --font-title : 'Mukta', sans-serif;
   --font-text :'Josefin Sans', sans-serif;
+  --box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 0px 0px, rgba(0, 0, 0, 0.3) 0px 0px 0px 0px, rgba(10, 37, 64, 0.35) 0px 0px 6px 0px inset;
 }
 
 
@@ -97,6 +98,9 @@ section {
   padding: 1rem;
   border-radius: 0.75rem;
   font-weight: bold;
+  background-color: var(--button-color) !important;
+  color: var(--main-bg-color);
+  margin-top: 10px;
 }
 
 .margin1r0 {
@@ -106,104 +110,107 @@ section {
   margin: 0 1rem;
 }
 /********************************************************************* NAV *********************************************************************/ 
-
-.openBurger {
-  z-index: 1;
-  height: 100%;
-  padding: 0 0 2rem;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  animation: open 0.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+.mobile {
+  display: none;
 }
 
-@keyframes open {
-  0% {
-    transform: scale(0);
-    transform-origin: 0% 0%;
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    transform-origin: 0% 0%;
-    opacity: 1;
-  }
+.desktop {
+  display: initial;
 }
 
-.openBurger button {
-  width: 100%;
-  font-size: 2rem;
-  padding: 2rem 1rem;
-  box-shadow: var(--box-shadow);
-  border: none;
-}
+/********************************************************************* NAVBAR *********************************************************************/ 
 
-button.croix {
+.navbar {
   display: flex;
-  justify-content: flex-end;
-  width: 95%;
-  margin-left: 0.5rem;
-  box-shadow: none;
+  align-items: center;
+  justify-content: center;
+}
+.navbar * {
+padding: 0rem 20px;
+font-weight: 600;
 }
 
-.croix img {
-  height: 3rem;
-  padding: 0.5rem;
+.navbar a:hover {
+  animation: nav 0.5s linear;
+}
+@keyframes nav {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
 }
 
-.padding-header {
-  padding: 0.5rem;
+header .social_media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.burger {
-height: 2rem;
+header .social_media img {
+  height: 25px;
+  padding: 0 10px;
 }
 
 .logo {
-  height: 4rem;
+  height: 80px;
+  object-fit: cover;
+  object-position: 0.5px center;
+  margin: 0;
 }
+
+header {
+  padding: 5px 0;
+  margin: 0;
+  max-width: 100vw;
+  min-height: fit-content;
+}
+
+
 
 /********************************************************************* HOME *********************************************************************/ 
-.main_container {
-  padding: 1rem 3rem;
+.home {
+  padding: 0;
 }
 
-/************* LANDING IMAGE *************/
-.landing_page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.main_video {
+  position: relative;
+  overflow: hidden;
+}
+
+.main_video video {
+  width: 100vw;
   height: 90vh;
-  margin: 1rem 0 2rem;
+  object-fit: cover;
 }
-.landing_page h1 {
-  font-size: 2.5rem;
-  text-align: center;
-}
-.landing_page h1, .landing_page h2 {
+
+.main_video div.main_title {
+  position: absolute;
   background-color: transparent;
-  padding: 0.5rem 2rem;
-  z-index: 1;
-  margin: 0;
   color: var(--main-bg-color);
+  top: 10rem;
+  left: 100px;
 }
 
-  .background_img {
-    position: absolute;
-    background-position: 50%;
-    min-width: 100%;
-    height: 100%;
-  }
-  .veil {
-    position: absolute;
-    background-color: var(--secondary-bg-color);
-    width: 100%;
-    height: 100%;
-    opacity: 60%;
-  }
+.main_video div.main_title * {
+  background-color: transparent;
+}
 
+div.main_title h1 {
+  font-size: 13rem;
+  padding:0;
+  margin: 0;
+  line-height:0.80;
+  overflow: hidden;
+}
+
+div.main_title h2 {
+  font-size: 3rem;
+  margin-bottom: 1px;
+}
+
+div.main_title h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
 
 /********************************************************************* Page 1 *********************************************************************/ 
 
@@ -285,28 +292,68 @@ width: 90%;
 
 
 /******************************************************************************************************************************************/ 
-/********************************************************************* DESKTIOP *********************************************************************/ 
+/********************************************************************* MOBILE *********************************************************************/ 
 /******************************************************************************************************************************************/ 
 
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
 
-  .mobile {
-    display: none;
+
+  .openBurger {
+    z-index: 1;
+    height: 100%;
+    padding: 0 0 2rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: open 0.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   }
-
-  .desktop {
-    display: initial;
+  
+  @keyframes open {
+    0% {
+      transform: scale(0);
+      transform-origin: 0% 0%;
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      transform-origin: 0% 0%;
+      opacity: 1;
+    }
   }
-
-/********************************************************************* NAVBAR *********************************************************************/ 
-.navbar {
-  padding: 2rem 0;
-
-}
-
-.navbar * {
-  padding: 0rem 2rem;
-}
+  
+  .openBurger button {
+    width: 100%;
+    font-size: 2rem;
+    padding: 2rem 1rem;
+    box-shadow: var(--box-shadow);
+    border: none;
+  }
+  
+  button.croix {
+    display: flex;
+    justify-content: flex-end;
+    width: 95%;
+    margin-left: 0.5rem;
+    box-shadow: none;
+  }
+  
+  .croix img {
+    height: 3rem;
+    padding: 0.5rem;
+  }
+  
+  .padding-header {
+    padding: 0.5rem;
+  }
+  
+  .burger {
+  height: 2rem;
+  }
+  
+  .logo {
+    height: 4rem;
+  }
   
 }
