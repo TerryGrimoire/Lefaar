@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import papa from "papaparse";
 import video from "../assets/video.mp4";
 import logoSimple from "../assets/logo.png";
 
@@ -10,6 +11,39 @@ export default function Home({ helmet }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const [partenaires, setPartenaires] = useState([]);
+
+  const prepareData2 = (data2) => {
+    // j correspond aux lignes de A à ZZZ sur fichier Excel
+    // index
+    // line correspond à
+    // index correspond à
+    // key correspond à
+
+    let obj = {};
+    const json = data2.map((line) => {
+      data2[0].forEach((key, j) => {
+        if (line[j] !== "" && key !== "" && key) {
+          obj = { ...obj, [key]: line[j] };
+        }
+      });
+
+      return obj;
+    });
+
+    json.shift();
+    setPartenaires(json);
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    fetch(import.meta.env.VITE_PARTENAIRES)
+      .then((result) => result.text())
+      .then((text) => papa.parse(text))
+      .then((data2) => prepareData2(data2.data));
+  }, []);
+
   return (
     <main className="flex-col">
       <Helmet>
@@ -44,12 +78,17 @@ export default function Home({ helmet }) {
           <article>
             <h3>L'association Le Faar</h3>
             <p>
-              L'association Le Faar a pour but de créer des espaces de réflexion
-              et de parole afin de lutter contre les violences systémiques et
-              les discriminations. Cette lutte est mise en place à travers des
-              animations, de l'accompagnement psychologique et des recherches
-              sur les thématiques de corps, de genre et d'identité.
+              L’association Le FAAR a pour vocation de créer des espaces de
+              recherche, de sensibilisation et d’animation autour de la
+              prévention des violences et des discriminations. Elle est le fruit
+              d’une rencontre entre Betty Finet (psychologue clinicienne),
+              Nathalie Carpentier (orthophoniste et éducatrice à la vie
+              affective et sexuelle) et Jérémy Feytout (enseignant et animateur
+              en santé sexuelle).
             </p>
+            <button type="button" className="button_style">
+              Découvrir notre histoire
+            </button>
           </article>
         </div>
         <div className="home_actions_container">
@@ -67,6 +106,16 @@ export default function Home({ helmet }) {
               </article>
             </div>
           ))}
+        </div>
+        <div className="home_partenaires">
+          <h3>Nos partenaires</h3>
+          <ul>
+            {partenaires.map((el) => (
+              <li>
+                <img src={el.img} alt={el.nom} />
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
     </main>
