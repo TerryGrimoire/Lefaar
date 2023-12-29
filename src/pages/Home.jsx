@@ -9,6 +9,7 @@ import actions from "../assets/actions.png";
 import passculture from "../assets/passculture.png";
 
 import duoFAAR from "../data/duoFAAR";
+import actionsMenee from "../data/actionsMenee";
 
 export default function Home({ helmet }) {
   useEffect(() => {
@@ -111,9 +112,11 @@ export default function Home({ helmet }) {
             <p>
               L’association Le FAAR a pour vocation de créer des espaces de
               recherche, de sensibilisation et d’animation autour de la
-              prévention des violences et des discriminations. L'association est
-              le fruit d’une rencontre entre plusieurs professionnels compétents
-              à traiter ces sujets importants de notre société.
+              prévention des violences et des discriminations. Elle agit
+              principalement sur des sujets liés au harcèlement, à l'éducation
+              sexiste et sexuelle et aux violences intrafamiliales.
+              L'association est le fruit d’une rencontre entre plusieurs
+              professionnels compétents dans ces différents domaines.
             </p>
             <div>
               <Link to="/">
@@ -135,21 +138,18 @@ export default function Home({ helmet }) {
             </div>
           </article>
         </div>
-        <div className="home_actions_container">
-          {duoFAAR.map((el) => (
-            <div key={el.id} className="home_actions">
-              <img src={el.img} alt={el.alt} />
-              <article>
-                <h2>{el.title.toUpperCase()}</h2>
-                <p>{el.text}</p>
-                <Link to={el.link}>
-                  <button type="button" className="button_style">
-                    Découvrir
-                  </button>
-                </Link>
-              </article>
-            </div>
-          ))}
+        <div className="actions_menees_container">
+          <h2>Les actions menées par Le Faar</h2>
+          <div className="actions_menees">
+            {actionsMenee.map((el) => (
+              <div key={el.id}>
+                <img src={el.img} alt={el.alt} />
+                <h5>{el.h5}</h5>
+                <p>{el.p}</p>
+                <Link to="/actions">Découvrir</Link>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="home_pass_container">
           <h3>Le Pass Culture </h3>
@@ -157,21 +157,21 @@ export default function Home({ helmet }) {
             <img src={passculture} alt="logo du pass culture" />
             <article>
               <h4>
-                Le Faar, partenaire officiel du ministère de l'Éducation
+                Le Faar est un partenaire officiel du ministère de l'Éducation
                 nationale, de la Jeunesse et des Sports.
               </h4>
               <p>
-                Depuis aôut 2022, l'association figure dans la liste des
-                partenaires officiels du Ministère de la Culture et dans la base
-                de données Adage. Ainsi, toutes nos interventions en milieux
-                scolaires et auprès de publics agés de 15 à 18 ans peuvent être
-                intégralement financées par le Pass Culture.
+                Depuis aôut 2022, l'association est un partenaire officiel du
+                dispositif Pass Culture et son nom figure dans la base de
+                données Adage. Ainsi, toutes les interventions en milieux
+                scolaires du Faar sont intégralement financées par le Pass
+                Culture.
               </p>
             </article>
           </div>
         </div>
         <div className="home_lequipe_container">
-          <h3>L'équipe du Faar</h3>
+          <h2>L'équipe du Faar</h2>
           <div className="home_lequipe">
             {equipe.map((el) => (
               <div>
@@ -186,9 +186,28 @@ export default function Home({ helmet }) {
             ))}
           </div>
         </div>
+        <div className="home_actions_container">
+          <h2>Les missions du Faar</h2>
+          <div className="home_actions_container">
+            {duoFAAR.map((el) => (
+              <div key={el.id} className="home_actions">
+                <img src={el.img} alt={el.alt} />
+                <article>
+                  <h3>{el.title}</h3>
+                  <p>{el.text}</p>
+                  <Link to={el.link}>
+                    <button type="button" className="button_style">
+                      Découvrir
+                    </button>
+                  </Link>
+                </article>
+              </div>
+            ))}
+          </div>
+        </div>
 
         <div className="home_partenaires">
-          <h3>Nos partenaires</h3>
+          <h2>Nos partenaires</h2>
           <ul>
             {partenaires.map((el) => (
               <li>
