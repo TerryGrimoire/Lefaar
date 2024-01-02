@@ -103,40 +103,62 @@ export default function Home({ helmet }) {
           </div>
         </div>
         <div className="home_FaarSmallExplanation">
-          <img
-            src={logoSimple}
-            alt="logo de l'association Le Faar en version simplifiée"
-          />
-          <article>
-            <h3>L'association Le Faar</h3>
-            <p>
-              L’association Le FAAR a pour vocation de créer des espaces de
-              recherche, de sensibilisation et d’animation autour de la
-              prévention des violences et des discriminations. Elle agit
-              principalement sur des sujets liés au harcèlement, à l'éducation
-              sexiste et sexuelle et aux violences intrafamiliales.
-              L'association est le fruit d’une rencontre entre plusieurs
-              professionnels compétents dans ces différents domaines.
-            </p>
-            <div>
-              <Link to="/">
-                <img
-                  src={informations}
-                  alt="icone pour signaler une information"
-                  className="icone"
-                />
-                À propos de l'association Le Faar
-              </Link>
-              <Link to="/">
-                <img
-                  src={actions}
-                  alt="icone pour signaler des actions"
-                  className="icone"
-                />
-                Les actions de l'association
-              </Link>
+          <div className="home_first">
+            <img
+              src={logoSimple}
+              alt="logo de l'association Le Faar en version simplifiée"
+            />
+            <article>
+              <h3>L'association Le Faar</h3>
+              <p>
+                L’association Le FAAR a pour vocation de créer des espaces de
+                recherche, de sensibilisation et d’animation autour de la
+                prévention des violences et des discriminations. Elle agit
+                principalement sur des sujets liés au harcèlement, à l'éducation
+                sexiste et sexuelle et aux violences intrafamiliales.
+                L'association est le fruit d’une rencontre entre plusieurs
+                professionnels compétents dans ces différents domaines.
+              </p>
+              <div>
+                <Link to="/">
+                  <img
+                    src={informations}
+                    alt="icone pour signaler une information"
+                    className="icone"
+                  />
+                  À propos de l'association Le Faar
+                </Link>
+                <Link to="/">
+                  <img
+                    src={actions}
+                    alt="icone pour signaler des actions"
+                    className="icone"
+                  />
+                  Les actions de l'association
+                </Link>
+              </div>
+            </article>
+          </div>
+          <div className="home_pass_container">
+            <div className="home_pass_container_top">
+              <h4>Le Pass Culture </h4>
+              <img src={passculture} alt="logo du pass culture" />
             </div>
-          </article>
+            <div className="home_pass">
+              <article>
+                <h4>
+                  Le Faar est un partenaire officiel du ministère de l'Éducation
+                  nationale, de la Jeunesse et des Sports.
+                </h4>
+                <p>
+                  Depuis juin 2022, Le Faar est un partenaire officiel du
+                  dispositif Pass Culture et son nom figure dans la base de
+                  données Adage. Ainsi, nos interventions en milieux scolaires
+                  sont intégralement financées par le Pass Culture.
+                </p>
+              </article>
+            </div>
+          </div>
         </div>
         <div className="actions_menees_container">
           <h2>Les actions menées par Le Faar</h2>
@@ -151,25 +173,7 @@ export default function Home({ helmet }) {
             ))}
           </div>
         </div>
-        <div className="home_pass_container">
-          <h3>Le Pass Culture </h3>
-          <div className="home_pass">
-            <img src={passculture} alt="logo du pass culture" />
-            <article>
-              <h4>
-                Le Faar est un partenaire officiel du ministère de l'Éducation
-                nationale, de la Jeunesse et des Sports.
-              </h4>
-              <p>
-                Depuis aôut 2022, l'association est un partenaire officiel du
-                dispositif Pass Culture et son nom figure dans la base de
-                données Adage. Ainsi, toutes les interventions en milieux
-                scolaires du Faar sont intégralement financées par le Pass
-                Culture.
-              </p>
-            </article>
-          </div>
-        </div>
+
         <div className="home_lequipe_container">
           <h2>L'équipe du Faar</h2>
           <div className="home_lequipe">
