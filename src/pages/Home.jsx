@@ -97,7 +97,7 @@ export default function Home({ helmet }) {
             <h3>Corps, Genres, Identités</h3>
             <Link to="/">
               <button type="button" className="button_style">
-                Découvrir notre histoire
+                Découvrir nos actions
               </button>
             </Link>
           </div>
@@ -113,28 +113,32 @@ export default function Home({ helmet }) {
               <p>
                 L’association Le FAAR a pour vocation de créer des espaces de
                 recherche, de sensibilisation et d’animation autour de la
-                prévention des violences et des discriminations. Elle agit
-                principalement sur des sujets liés au harcèlement, à l'éducation
-                sexiste et sexuelle et aux violences intrafamiliales.
-                L'association est le fruit d’une rencontre entre plusieurs
-                professionnels compétents dans ces différents domaines.
+                prévention des violences et des discriminations. L'association
+                est présente auprès de tous les publics : enfants, adolescents,
+                adultes, femmes victimes de violences, personnes LGBTQIA+, etc.
+              </p>
+              <p>
+                Nos thématiques balaient les questionnements autour de
+                l’identité (de genre, sexuelle, linguistique et culturelle), de
+                la vie affective, la santé sexuelle et la réduction des risques,
+                les discriminations et tous les types de violences.
               </p>
               <div>
-                <Link to="/">
+                <Link to="/Actions">
                   <img
                     src={informations}
                     alt="icone pour signaler une information"
                     className="icone"
                   />
-                  À propos de l'association Le Faar
+                  Les actions de l'association
                 </Link>
-                <Link to="/">
+                <Link to="/Recherches">
                   <img
                     src={actions}
                     alt="icone pour signaler des actions"
                     className="icone"
                   />
-                  Les actions de l'association
+                  Découvrir nos recherches
                 </Link>
               </div>
             </article>
