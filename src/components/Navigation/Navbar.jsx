@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <nav className="flex justify-between navbar">
-      <Link to="/Services">Notre histoire</Link>
-      <Link to="/Tarifs">Nos actions</Link>
-      <Link to="/Contact">Nos recherches</Link>
+      <Link to="/">Accueil</Link>
+      <Link to="/Actions">Nos actions</Link>
+      <Link to="/Recherches">Nos recherches</Link>
     </nav>
   );
 }

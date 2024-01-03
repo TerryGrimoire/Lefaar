@@ -32,13 +32,17 @@ function Burger({ helmet }) {
         <Navbar setOpenBurger={setOpenBurger} />
       </div>
       <div className="social_media">
-        <a href="https://www.facebook.com/AssociationLeFAAR">
+        <a
+          href="https://www.facebook.com/AssociationLeFAAR"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img src={facebook} alt="logo Facebook" />
         </a>
-        <a href="/">
+        <a href="/" target="_blank" rel="noreferrer">
           <img src={instagram} alt="logo Instagram" />
         </a>
-        <a href="/">
+        <a href="/" target="_blank" rel="noreferrer">
           <img src={linkedin} alt="logo LinkedIn" />
         </a>
       </div>

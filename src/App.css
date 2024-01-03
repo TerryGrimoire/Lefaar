@@ -248,7 +248,7 @@ div.content_title h3 {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  padding: 0px 10vw 60px;
+  padding: 60px 10vw 60px;
 }
 
 .home_FaarSmallExplanation article {
@@ -386,13 +386,14 @@ div.content_title h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 70%;
+  flex-wrap: wrap;
+  max-width: 80%;
   padding: 60px;
 }
 
 .home_partenaires ul img {
   height: 100px;
-  width: 100px;
+  width: auto;
   object-fit: cover;
   object-position: center;
   margin: 30px 10px;
@@ -639,8 +640,23 @@ width: 90%;
 .mentions-container h2 {
   margin-top: 2rem;
 }
+/********************************************************************* ERROR 404 *********************************************************************/ 
 
+.error {
+  padding: 2rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background-image: url(./assets/erreur.webp);
+  background-size: 15%;
+  background-position: center;
+}
 
+.error * {
+  margin: 10px;
+}
 /******************************************************************************************************************************************/ 
 /********************************************************************* MOBILE *********************************************************************/ 
 /******************************************************************************************************************************************/ 

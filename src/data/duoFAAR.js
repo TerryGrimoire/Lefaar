@@ -9,7 +9,7 @@ const duoFAAR = [
     title: "Formation",
     img: formation,
     alt: "",
-    text: "formation Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor labore quae quasi excepturi voluptates impedit rerum ipsum ipsa consequatur magnam tenetur saepe doloremque perspiciatis, eos explicabo aut nulla reiciendis. At, quam quasi totam voluptatum veritatis aspernatur quos inventore, eum aut velit consequatur aliquid, adipisci quibusdam quidem perferendis mollitia voluptates minus soluta tempora laboriosam accusamus beatae? Omnis qui eius maxime ipsam eos. Nemo, pariatur accusamus! Qui vel odio, et a tempore reprehenderit nisi ullam consequatur corrupti repellat ut eos, tenetur nam officiis error ab maxime distinctio quae harum incidunt quas est? Consequatur eum rem ipsa aspernatur nobis explicabo ipsum tenetur. Laborum?",
+    text: "Construire des contenus qui permettent au terrain et à la recherche de se rencontrer pour fournir à la fois des informations sourcées et vérifiées et des outils efficaces sur le terrain de la lutte contre les discriminations et les violences.",
     link: "/",
   },
   {
@@ -17,7 +17,7 @@ const duoFAAR = [
     title: "Animation",
     img: animation,
     alt: "",
-    text: "animation Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor labore quae quasi excepturi voluptates impedit rerum ipsum ipsa consequatur magnam tenetur saepe doloremque perspiciatis, eos explicabo aut nulla reiciendis. At, quam quasi totam voluptatum veritatis aspernatur quos inventore, eum aut velit consequatur aliquid, adipisci quibusdam quidem perferendis mollitia voluptates minus soluta tempora laboriosam accusamus beatae? Omnis qui eius maxime ipsam eos. Nemo, pariatur accusamus! Qui vel odio, et a tempore reprehenderit nisi ullam consequatur corrupti repellat ut eos, tenetur nam officiis error ab maxime distinctio quae harum incidunt quas est? Consequatur eum rem ipsa aspernatur nobis explicabo ipsum tenetur. Laborum?",
+    text: "Construire sur mesure et proposer des espaces de réflexion en groupes autour des thématiques de la vie sexuelle et affective, du genre, des violences et des discriminations grâce aux outils de l’éducation populaire et les médiations artistiques (théâtre, écriture)",
     link: "/",
   },
   {
@@ -25,7 +25,7 @@ const duoFAAR = [
     title: "Accompagnement",
     img: accompagnement,
     alt: "",
-    text: "accompagnement Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor labore quae quasi excepturi voluptates impedit rerum ipsum ipsa consequatur magnam tenetur saepe doloremque perspiciatis, eos explicabo aut nulla reiciendis. At, quam quasi totam voluptatum veritatis aspernatur quos inventore, eum aut velit consequatur aliquid, adipisci quibusdam quidem perferendis mollitia voluptates minus soluta tempora laboriosam accusamus beatae? Omnis qui eius maxime ipsam eos. Nemo, pariatur accusamus! Qui vel odio, et a tempore reprehenderit nisi ullam consequatur corrupti repellat ut eos, tenetur nam officiis error ab maxime distinctio quae harum incidunt quas est? Consequatur eum rem ipsa aspernatur nobis explicabo ipsum tenetur. Laborum?",
+    text: "Favoriser la prise-en-soin psychologique des femmes victimes de violences, des personnes victimes de violences intra-familiales et des personnes LGBTQIA+ (qui questionnent leur orientation sexuelle et/ou leur identité de genre ; qui sont victimes de violences)",
     link: "/",
   },
   {
@@ -33,7 +33,7 @@ const duoFAAR = [
     title: "Recherche",
     img: recherche,
     alt: "",
-    text: "recherche Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor labore quae quasi excepturi voluptates impedit rerum ipsum ipsa consequatur magnam tenetur saepe doloremque perspiciatis, eos explicabo aut nulla reiciendis. At, quam quasi totam voluptatum veritatis aspernatur quos inventore, eum aut velit consequatur aliquid, adipisci quibusdam quidem perferendis mollitia voluptates minus soluta tempora laboriosam accusamus beatae? Omnis qui eius maxime ipsam eos. Nemo, pariatur accusamus! Qui vel odio, et a tempore reprehenderit nisi ullam consequatur corrupti repellat ut eos, tenetur nam officiis error ab maxime distinctio quae harum incidunt quas est? Consequatur eum rem ipsa aspernatur nobis explicabo ipsum tenetur. Laborum?",
+    text: "Dynamiser la recherche sur les thématiques des discriminations et des violences en menant un travail de recherche associative et universitaire. Utilisation des méthodes quantitatives (questionnaire) et qualitatives (entretiens, observations, focus group…).",
     link: "/",
   },
 ];

@@ -6,15 +6,15 @@ function Mentions() {
   }, []);
 
   const information = {
-    siteLink: " https://lemontecito.fr ",
-    companyName: " Le Montecito ",
-    ownerName: " Simon Giraudet ",
-    email: " lemontecito1011@gmail.com ",
-    phone: " 09 86 50 12 07 ",
-    address: " 6 All. Duquesne, 44000, Nantes.",
-    hostName: " 1and1 ",
-    hostAddress: " Test des addresses 44300 Host",
-    hostPhone: " 01.02.03.04.05 ",
+    siteLink: " https://lefaar.re ",
+    companyName: " Le Faar ",
+    ownerName: " Le Faar ",
+    email: " contact@lefaar.re ",
+    phone: " 06 92 53 78 12 ",
+    address: " 	354 RUE RAPHAEL BABET 97480 SAINT-JOSEPH ",
+    hostName: " Hostinger ",
+    hostAddress: " 143 Rue Emile Julien, 34070 Montpellier, France ",
+    hostPhone: " 08 92 97 70 93 ",
   };
 
   return (
@@ -617,7 +617,7 @@ function Mentions() {
         <a href={information.siteLink}>{information.siteLink}</a>
         est soumis au droit français. En dehors des cas où la loi ne le permet
         pas, il est fait attribution exclusive de juridiction aux tribunaux
-        compétents de Nantes
+        compétents de La Réunion.
       </p>
     </div>
   );
