@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
 import Actions from "./pages/Actions";
+import Action from "./pages/Action";
 import Recherches from "./pages/Recherches";
 import Mentions from "./pages/Mentions";
 import Erreur404 from "./pages/Erreur404";
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<Home helmet={helmet} />} />
         <Route path="/Recherches" element={<Recherches helmet={helmet} />} />
         <Route path="/Actions" element={<Actions helmet={helmet} />} />
+        <Route path="/Actions/:id" element={<Action helmet={helmet} />} />
         <Route path="/Mentions" element={<Mentions />} />
         <Route path="/404" element={<Erreur404 helmet={helmet} />} />
         <Route path="*" element={<Navigate replace to="/404" />} />

@@ -574,10 +574,113 @@ width: 80%;
   width: 40%;
   text-align: center;
 }
+.actions_page_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 60px 5vw;
+}
+
+.actions_page_container > *  {
+  box-shadow: var(--box-shadow);
+  width: 20vw;
+  height: 20vw;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.actions_page_container .action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.actions_page_container img {
+width: 100%;
+height: 16vw;
+object-fit: cover;
+}
+
+.actions_page_container h4 {
+  width: 100%;
+  height: 4vw;
+  overflow: hidden;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background-color: var(--secondary-bg-color);
+  color: var(--main-bg-color);
+  }
 
 /********************************************************************* Secondary Page Plus *********************************************************************/ 
 
+.action_by_id .top{
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
 
+.action_by_id .top img{
+ width: 70%;
+ object-fit: cover;
+ max-height: 80vh;
+}
+
+.action_by_id .top div{
+  width: 30%;
+  padding: 20px;
+  background-color: var(--secondary-bg-color);
+  color: var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ }
+
+ .action_by_id .top div * {
+  background-color: transparent;
+  overflow: hidden;
+  margin: 1rem;
+ }
+
+ .action_by_id .top div h2{
+  font-size: 3rem;
+ }
+
+ .action_by_id .middle {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: 20px;
+ }
+
+ .action_by_id .middle * {
+  background-color: transparent;
+  margin: 10px 0;
+ }
+
+ .action_by_id .middle > * {
+  background-color: rgb(237, 237, 237);
+  padding: 20px;
+  margin: 10px 15px;
+ }
+
+ .action_by_id .middle article {
+  width: 70%;
+ }
+ 
+ .action_by_id .middle ul {
+  width: 100%;
+ }
+
+ .action_by_id .middle li {
+  width: 100%;
+ }
 /********************************************************************* FOOTER *********************************************************************/ 
 
 .footer {

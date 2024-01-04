@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import papa from "papaparse";
 import { Helmet } from "react-helmet";
 
-function Actions({ helmet }) {
+function Action({ helmet }) {
+  const { id } = useParams();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -37,36 +39,48 @@ function Actions({ helmet }) {
       .then((text) => papa.parse(text))
       .then((data2) => prepareData(data2.data));
   }, []);
+
+  const action = actions.filter(
+    (el) => parseInt(el.id, 10) === parseInt(id, 10)
+  )[0];
+
   return (
-    <div className="secondary_page">
+    <div>
       <Helmet>
         <title> {helmet.title} | Actions </title>
         <link rel="canonical" href={`${helmet.href}/Actions`} />
         <meta name="description" content={helmet.description} />
       </Helmet>
 
-      <div className="top_banniere actiions">
-        <h2>Nos actions</h2>
-        <p>
-          La diversité de nos actions font la force de notre association. Nous
-          touchons tous les publics, de tout âge, de toute origine, de toute
-          orientation sexuelle.
-        </p>
-
-        <div className="veil" />
-      </div>
-      <section className="actions_page_container">
-        {actions.map((el) => (
-          <Link to={`/Actions/${el.id}`} key={el.id}>
-            <div className="action">
-              <img src={el.image} alt={el.nom} />
-              <h4>{el.nom}</h4>
+      {action && (
+        <section className="action_by_id">
+          <div className="top">
+            <img src={action.image} alt={action.nom} />
+            <div>
+              <h2>{action.nom}</h2>
+              <small>{action.public}</small>
+              <p>{action.description}</p>
             </div>
-          </Link>
-        ))}
-      </section>
+          </div>
+          <div className="middle">
+            <article>
+              <h3>Notre méthodologie</h3>
+              {action.methodes.split(";").map((el) => (
+                <p>{el}</p>
+              ))}
+            </article>
+            <div className="equipe">
+              <h3>L'équipe</h3>
+              <ul>
+                {action.equipe &&
+                  action.equipe.split(";").map((el) => <li>{el}</li>)}
+              </ul>
+            </div>
+          </div>
+        </section>
+      )}
     </div>
   );
 }
 
-export default Actions;
+export default Action;
