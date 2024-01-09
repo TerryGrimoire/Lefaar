@@ -94,7 +94,7 @@ export default function Home({ helmet }) {
           <div className="content_title">
             <h1>Le Faar</h1>
             <h2>Formation, Animation, Accompagnement, Recherche</h2>
-            <h3>Corps, Genres, Identités</h3>
+            <h3>Corps, Genres et Identités à La Réunion</h3>
             <Link to="/">
               <button type="button" className="button_style">
                 Découvrir nos actions
